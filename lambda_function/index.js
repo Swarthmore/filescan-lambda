@@ -5,7 +5,6 @@ const uuidv4 = require('uuid/v4')
 const pdfjsLib = require('pdfjs-dist');
 AWS.config.update({ region: process.env.REGION || 'us-east-1' })
 
-
 // Given a PDF file, return accessibility and meta data info
 // AWS Lambda function connected to an API Gateway call
 // The body needs to contain the key (filename) of a PDF file in S3.
@@ -81,7 +80,6 @@ const returnError = function(reason) {
     };
 }   
 
-
 // Given S3 file information, read the file into memory
 function readFile (params) {
     return new Promise(function(resolve, reject) {
@@ -99,7 +97,6 @@ function readFile (params) {
         });
     })
     .then(testPDFBuffer, returnError);
-
 }
 
 

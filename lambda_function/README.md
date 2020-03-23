@@ -1,0 +1,1 @@
+This folder contains the runtime files for the lambda function. Upload this folder to AWS Lambdas function UI.
